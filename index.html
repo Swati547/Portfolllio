@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio website for Swati Sharma, Full Stack Developer and BCA student.">
+    <title>Swati Sharma | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="#home" class="logo">Swati Sharma</a>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <a href="#contact" class="button button-secondary">Hire Me</a>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <p class="eyebrow">Full Stack Developer</p>
+                <h1>Hi, I’m <span>Swati Sharma</span></h1>
+                <p>I build polished web experiences with clean interfaces and strong frontend-to-backend workflows. Currently pursuing BCA and delivering modern web projects with React, Node.js, and responsive design.</p>
+                <div class="hero-actions">
+                    <a href="#projects" class="button">View Projects</a>
+                    <a href="#contact" class="button button-secondary">Contact Me</a>
+                </div>
+            </div>
+            <div class="hero-stats">
+                <article>
+                    <strong>8+</strong>
+                    <span>Projects completed</span>
+                </article>
+                <article>
+                    <strong>4</strong>
+                    <span>Skills mastered</span>
+                </article>
+                <article>
+                    <strong>1</strong>
+                    <span>Year of experience</span>
+                </article>
+            </div>
+        </section>
+
+        <section class="about" id="about">
+            <div class="section-heading">
+                <span>About Me</span>
+                <h2>A creative developer with a passion for building experiences users enjoy.</h2>
+            </div>
+            <div class="about-grid">
+                <div>
+                    <p>I am a BCA student and full stack web developer focused on creating responsive, accessible websites and apps. I enjoy working across the full stack, from design and frontend interactions to server logic and database integration.</p>
+                    <p>My work is driven by simplicity, good performance, and a strong attention to detail. I enjoy collaborating with other creators and bringing ideas to life through modern web technologies.</p>
+                </div>
+                <div class="about-cards">
+                    <div>
+                        <h3>Education</h3>
+                        <p>Bachelor of Computer Applications</p>
+                    </div>
+                    <div>
+                        <h3>Interests</h3>
+                        <p>Web apps, UI design, learning new JavaScript tools</p>
+                    </div>
+                    <div>
+                        <h3>Tools</h3>
+                        <p>HTML, CSS, JavaScript,  Node.js, Express, Git</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects" id="projects">
+            <div class="section-heading">
+                <span>Projects</span>
+                <h2>Selected work that demonstrates real-world solutions.</h2>
+            </div>
+            <div class="project-grid">
+                <article class="project-card">
+                    <h3>Portfolio Website</h3>
+                    <p>A responsive personal website built using HTML, CSS, and DOM JavaScript for animated sections, smooth navigation, and interactive project previews.</p>
+                    <span>HTML • CSS • DOM JavaScript</span>
+                    <a href="index.html" class="button button-secondary">View Project</a>
+                </article>
+                <article class="project-card">
+                    <h3>Interactive Website</h3>
+                    <p>A multi-page website with dynamic DOM-driven features like image galleries, tabbed content, and form validation to improve user engagement.</p>
+                    <span>HTML • CSS • DOM JavaScript</span>
+                    <a href="#" class="button button-secondary">View Project</a>
+                </article>
+                <article class="project-card">
+                    <h3>Task Manager App</h3>
+                    <p>An interactive task web app that uses DOM JavaScript for adding, editing, deleting, and filtering tasks without page reloads.</p>
+                    <span>HTML • CSS • DOM JavaScript</span>
+                    <a href="#" class="button button-secondary">View Project</a>
+                </article>
+            </div>
+            <div class="project-actions">
+                <a href="#contact" class="button">Contact for More Projects</a>
+                <a href="#" class="button button-secondary">View All Projects</a>
+            </div>
+        </section>
+
+        <section class="skills" id="skills">
+            <div class="section-heading">
+                <span>Skills</span>
+                <h2>Technical strengths I bring to every project.</h2>
+            </div>
+            <div class="skill-grid">
+                <div class="skill-card">
+                    <h3>Frontend</h3>
+                    <p>HTML, CSS, JavaScript</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Backend</h3>
+                    <p>Node.js, Express, REST APIs</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Design</h3>
+                    <p>Responsive layouts, accessible interfaces, clean UI patterns</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <div class="section-heading">
+                <span>Contact</span>
+                <h2>Ready to collaborate? Let’s build something together.</h2>
+            </div>
+            <div class="contact-panel">
+                <div>
+                    <h3>Get in touch</h3>
+                    <p>Feel free to reach out for project inquiries, freelance work, or any opportunities to collaborate. I respond quickly to messages and am excited to hear about your idea.</p>
+                    <ul>
+                        <li>Email: <a href="mailto:swati2005barbiesharma@gmail.com">swati2005barbiesharma@gmail.com</a></li>
+                        <li>Phone: 8219847074</li>
+                        <li>Location: Bilaspur, Himachal Pradesh</li>
+                    </ul>
+                </div>
+                <form class="contact-form">
+                    <label>
+                        Name
+                        <input type="text" placeholder="Your name" required>
+                    </label>
+                    <label>
+                        Email
+                        <input type="email" placeholder="Your email" required>
+                    </label>
+                    <label>
+                        Message
+                        <textarea rows="5" placeholder="Your message" required></textarea>
+                    </label>
+                    <button type="submit" class="button">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Swati Sharma. Built with HTML, CSS, and JavaScript.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
