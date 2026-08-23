@@ -7,6 +7,29 @@ document.addEventListener("DOMContentLoaded", () => {
     const contactList = document.querySelector(".contact-panel ul");
     const footerText = document.querySelector("footer p");
     const form = document.querySelector(".contact-form");
+    const revealItems = document.querySelectorAll(
+        ".about, .projects, .skills, .contact, .project-card, .skill-card"
+    );
+
+    revealItems.forEach((item, index) => {
+        item.classList.add("reveal");
+        item.style.setProperty("--reveal-delay", `${(index % 3) * 100}ms`);
+    });
+
+    if ("IntersectionObserver" in window) {
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("is-visible");
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+
+        revealItems.forEach((item) => revealObserver.observe(item));
+    } else {
+        revealItems.forEach((item) => item.classList.add("is-visible"));
+    }
 
     logo.textContent = "Swati Sharma";
     heroEyebrow.textContent = "Full Stack Developer";
