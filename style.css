@@ -12,8 +12,13 @@ body {
     color: #e5f3ff;
     background: radial-gradient(circle at top, #0b1a36 0%, #0d2a57 45%, #08172d 100%);
 }
-p.eyebrow{
-    font-size: 50px;
+p.eyebrow {
+    margin: 0 0 18px;
+    font-size: 46px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #8bc3ff;
 }
 
 a {
@@ -75,6 +80,7 @@ nav li a:focus-visible {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    gap: 10px;
     padding: 14px 24px;
     border-radius: 999px;
     border: none;
@@ -84,6 +90,21 @@ nav li a:focus-visible {
     transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
     cursor: pointer;
     box-shadow: 0 18px 45px rgba(75, 123, 255, 0.25);
+}
+
+.button-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+
+.button-icon svg {
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 
 .button:hover,
@@ -145,14 +166,14 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 470px;
+    min-height: 350px;
     aspect-ratio: 1;
-    padding: 24px;
+    padding: 16px 16px 18px;
     overflow: hidden;
     border: 1px solid rgba(183, 225, 255, 0.38);
-    border-radius: 28px;
+    border-radius: 22px;
     background: linear-gradient(155deg, rgba(27, 76, 128, 0.98), rgba(8, 23, 52, 0.98) 72%);
-    box-shadow: 18px 18px 0 rgba(75, 123, 255, 0.12), 0 28px 65px rgba(4, 15, 40, 0.48);
+    box-shadow: 12px 12px 0 rgba(75, 123, 255, 0.12), 0 18px 40px rgba(4, 15, 40, 0.38);
     animation: profile-float 5s ease-in-out 1s infinite;
 }
 
@@ -235,18 +256,18 @@ main {
     z-index: 1;
     display: grid;
     place-items: center;
-    width: min(230px, 78%);
+    width: min(165px, 62%);
     height: auto;
     aspect-ratio: 1;
-    margin: 24px auto 0;
-    border: 7px solid rgba(225, 240, 255, 0.8);
-    border-radius: 20px;
+    margin: 14px auto 0;
+    border: 5px solid rgba(225, 240, 255, 0.8);
+    border-radius: 18px;
     background: radial-gradient(circle at 35% 25%, #bde8ff 0%, #6da5dc 38%, #315b9b 100%);
     color: #ffffff;
-    font-size: 3rem;
+    font-size: 2.1rem;
     font-weight: 700;
     letter-spacing: 0.08em;
-    box-shadow: 0 0 0 10px rgba(141, 185, 255, 0.1), 10px 14px 0 rgba(7, 20, 48, 0.24);
+    box-shadow: 0 0 0 8px rgba(141, 185, 255, 0.08), 7px 8px 0 rgba(7, 20, 48, 0.18);
 }
 
 .profile-avatar img {
@@ -272,17 +293,17 @@ main {
 }
 
 .profile-details h2 {
-    margin: 0 0 8px;
+    margin: 0 0 6px;
     color: #ffffff;
-    font-size: clamp(1.45rem, 2.5vw, 1.8rem);
+    font-size: clamp(1.05rem, 1.8vw, 1.3rem);
     line-height: 1.15;
 }
 
 .profile-details p {
     margin: 0 auto;
     color: #b9c9e2;
-    font-size: 0.98rem;
-    line-height: 1.5;
+    font-size: 0.82rem;
+    line-height: 1.4;
 }
 
 .profile-label,
@@ -295,13 +316,15 @@ main {
 }
 
 .profile-card .button {
-    min-width: 170px;
-    margin-top: 24px;
+    min-width: 118px;
+    margin-top: 14px;
+    padding: 0.55rem 0.85rem;
+    font-size: 0.74rem;
 }
 
 @media (max-width: 980px) {
     .profile-card {
-        min-height: 430px;
+        min-height: 320px;
     }
 }
 
@@ -309,9 +332,9 @@ main {
     margin: 0 0 16px;
     color: #7fa8ff;
     font-weight: 700;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
-    font-size: 0.85rem;
+    font-size: 40px;
 }
 
 .hero-content h1 {

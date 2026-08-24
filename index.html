@@ -32,7 +32,14 @@
                 <div class="hero-actions">
                     <a href="#projects" class="button">View Projects</a>
                     <a href="#contact" class="button button-secondary">Contact Me</a>
-                    <a href="resume.pdf" class="button button-secondary" download="Swati-Sharma-Resume.pdf">Download Resume</a>
+                    <a href="resume.pdf" class="button button-secondary" download="Swati-Sharma-Resume.pdf">
+                        <span class="button-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+                                <path d="M12 3a1 1 0 0 1 1 1v8.59l2.3-2.3a1 1 0 1 1 1.4 1.42l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.42L11 12.59V4a1 1 0 0 1 1-1Zm-7 15a1 1 0 0 1 1-1h12a1 1 0 1 1 0 2H6a1 1 0 0 1-1-1Z" fill="currentColor"/>
+                            </svg>
+                        </span>
+                        <span>Download Resume</span>
+                    </a>
                 </div>
             </div>
             <div class="hero-stats">
@@ -174,19 +181,20 @@
                         <li>GitHub: <a href="https://github.com/Swati547/" target="_blank" rel="noopener noreferrer">GitHub</a></li>
                     </ul>
                 </div>
-                <form class="contact-form">
+                <form class="contact-form" novalidate>
                     <label>
                         Name
-                        <input type="text" placeholder="Your name" required>
+                        <input name="name" type="text" placeholder="Your name" required>
                     </label>
                     <label>
                         Email
-                        <input type="email" placeholder="Your email" required>
+                        <input name="email" type="email" placeholder="Your email" required>
                     </label>
                     <label>
                         Message
-                        <textarea rows="5" placeholder="Your message" required></textarea>
+                        <textarea name="message" rows="5" placeholder="Your message" required></textarea>
                     </label>
+                    <p class="form-status" role="status" aria-live="polite"></p>
                     <button type="submit" class="button">Send Message</button>
                 </form>
             </div>

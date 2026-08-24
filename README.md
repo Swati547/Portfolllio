@@ -12,9 +12,11 @@ A frontend project containing HTML, CSS, and JavaScript files.
 - **script1.js** - Additional JavaScript file
 
 ## Getting Started
-1. Open `index.html` in your web browser
-2. Check the console for any JavaScript logs or errors
-3. Review the stylesheets and scripts to understand the project structure
+1. Install Node.js if it is not already installed.
+2. Start the backend with `node server.js`.
+3. Open `http://localhost:3000` in your browser.
+
+Contact form submissions are validated and stored in `messages.json` locally. Do not commit that file if it contains real visitor data.
 
 ## Files Description
 - HTML files contain the page structure

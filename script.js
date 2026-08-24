@@ -43,10 +43,34 @@ document.addEventListener("DOMContentLoaded", () => {
 
     footerText.textContent = `© ${new Date().getFullYear()} Swati Sharma. Built with HTML, CSS, and JavaScript.`;
 
-    form.addEventListener("submit", (event) => {
+    form.addEventListener("submit", async (event) => {
         event.preventDefault();
-        const name = form.querySelector("input[type='text']").value.trim();
-        alert(`Thank you, ${name || "there"}! Your message has been received. I will contact you soon.`);
-        form.reset();
+        const status = form.querySelector(".form-status");
+        const submitButton = form.querySelector("button[type='submit']");
+        const formData = new FormData(form);
+        const payload = Object.fromEntries(formData.entries());
+
+        status.textContent = "Sending...";
+        submitButton.disabled = true;
+
+        try {
+            const response = await fetch("/api/contact", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(payload)
+            });
+            const result = await response.json();
+
+            if (!response.ok) {
+                throw new Error(result.error || "Unable to send your message.");
+            }
+
+            status.textContent = result.message;
+            form.reset();
+        } catch (error) {
+            status.textContent = error.message || "Unable to send your message.";
+        } finally {
+            submitButton.disabled = false;
+        }
     });
 });

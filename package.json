@@ -1,0 +1,21 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "A frontend project containing HTML, CSS, and JavaScript files.",
+  "homepage": "https://github.com/Swati547/portfolllio#readme",
+  "bugs": {
+    "url": "https://github.com/Swati547/portfolllio/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Swati547/portfolllio.git"
+  },
+  "license": "ISC",
+  "author": "swati",
+  "type": "commonjs",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  }
+}
