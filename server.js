@@ -1,6 +1,7 @@
 const http = require("http");
 const fs = require("fs");
 const path = require("path");
+const { exec } = require("child_process");
 
 const port = Number(process.env.PORT) || 3000;
 const rootDirectory = __dirname;
@@ -101,5 +102,17 @@ const server = http.createServer(async (request, response) => {
 });
 
 server.listen(port, () => {
-	console.log(`Portfolio server running at http://localhost:${port}`);
+	const url = `http://localhost:${port}`;
+	console.log(`Portfolio server running at ${url}`);
+
+	const openCommands = {
+	win32: `start "" "${url}"`,
+	darwin: `open "${url}"`,
+	linux: `xdg-open "${url}"`
+	};
+	const openCommand = openCommands[process.platform];
+
+	if (openCommand) {
+		exec(openCommand);
+	}
 });
